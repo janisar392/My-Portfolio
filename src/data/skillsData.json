@@ -1,0 +1,25 @@
+{
+  "BackEndSkills": [
+    { "name": "Spring Boot", "level": "95%" }
+  ],
+  "FrontEndSkills": [   
+    { "name": "React", "level": "60%" },
+    { "name": "Bootstrap", "level": "70%" },
+    { "name": "Tailwind CSS", "level": "40%" }      
+  ],
+  "DatabasesSkills": [
+    { "name": "PostgreSQL", "level": "85%" },
+    { "name": "MySQL", "level": "90%" }
+  ],
+  "ProgrammingLanguages": [
+    { "name": "Java", "level": "95%" },
+    { "name": "JavaScript", "level": "65%" },
+    { "name": "Python", "level": "40%" }
+  ],
+  "OtherSkills": [
+    { "name": "GitHub", "level": "90%" },
+    { "name": "Postman", "level": "90%" },
+    { "name": "VS Code", "level": "95%" },
+    { "name": "IntelliJ IDEA", "level": "98%" }
+  ]
+}

@@ -1,0 +1,238 @@
+
+.contact {
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+
+.contact h2 {
+    left: 50%;
+    display: inline-block;
+    transform: translateX(-50%);
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input_box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input_box .input_field {
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+
+.contact form .input_box .input_field input,
+.contact form .input_box .input_field_email input,
+.contact form .textarea_field textarea {
+    width: 100%;
+    height: 1005;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+
+.contact form .input_box .input_field input::placeholder,
+.contact form .input_box .input_field_email input::placeholder,
+.contact form .textarea_field textarea::placeholder {
+    color: var(--text-color);
+}
+
+.contact form .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.contact form .input_box .input_field input:focus~.focus,
+.contact form .input_box .input_field input:valid~.focus,
+.contact form .input_box .input_field_email input:focus~.focus,
+.contact form .input_box .input_field_email input:valid~.focus,
+.contact form .textarea_field textarea:focus~.focus,
+.contact form .textarea_field textarea:valid~.focus {
+    width: 100%;
+}
+
+.contact form .textarea_field {
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+
+.contact form .input_box .input_field_email {
+    position: relative;
+    width: 100%;
+    margin: .8rem 0;
+}
+
+.contact form .textarea_field textarea {
+    resize: none;
+}
+
+.contact form .btn-box.btns .btn {
+    cursor: pointer;
+}
+
+.contact_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.contact_col {
+    flex: 1 1 40rem;
+}
+
+
+.contact_info {
+    margin: auto;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.contact_data {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.contact_data_col {
+    width: 50%;
+    position: relative;
+}
+
+.contact_info h5 {
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+.contact_info p {
+    font-size: 15px;
+    margin: 10px;
+    color: var(--text-color);
+    /* margin-left: 50px; */
+}
+
+.contact_info p .sicon {
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+    fill: var(--main-color);
+}
+
+.contact_button {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.social_icon{
+    position: relative;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+.social_icon a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+.social_icon a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+}
+.social_icon a:hover::before{
+    width: 100%;
+    background: var(--main-color);
+}
+.social_icon .icon{
+    fill: var(--main-color);
+}
+.social_icon .icon:hover{
+    fill: var(--bg-color);
+}
+
+@media (max-width: 1064px) {
+    
+    .contact_data h5 {
+        font-size: 17px;
+    }
+
+    .contact_data p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 850px) {
+    
+    .contact_data p {
+        font-size: 10px;
+        margin-left: 0;
+    }
+
+    .contact_data p i {
+        margin-right: 0;
+        margin-right: 5px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 812px) {
+    .contact_data p,
+    .contact_datap p i {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 462px) {
+
+
+    .contact form .input_box .input_field {
+        width: 100%;
+    }
+
+
+    .contact_data p,
+    .contact_data p i {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 312px) {
+
+    .contact_data p,
+    .contact_data p i {
+        font-size: 9px;
+    }
+}

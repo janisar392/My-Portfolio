@@ -1,0 +1,25 @@
+.word {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; 
+}
+ .word.active {
+    opacity: 1;
+}
+.word .letter {
+    display: inline-block;
+    transform-origin: center center 25px; 
+}
+.word .letter.out {
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2); 
+}
+ .word .letter.in {
+    transform: rotateX(0deg); 
+    transition: 0.38s ease; 
+}
+ .word .letter.behind {
+    transform: rotateX(-90deg); 
+    transition: 0.38s ease;
+}

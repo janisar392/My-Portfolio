@@ -1,0 +1,120 @@
+
+.education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.education .education_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.education_row .education_colum {
+    flex: 1 1 40rem;
+}
+
+.education_colum .title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.education_colum .education_box {
+    position: relative;
+    border-left: .2rem solid var(--main-color);
+}
+
+.education_box .education_content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.education_box .education_content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.education_content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.education_content .content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.education_content .content:hover::before{
+    width: 100%;
+}
+
+.education_content .content .year {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+}
+
+
+.education_content .content .year .box {
+    padding-right: .5rem;
+}
+
+.education_content .content h3{
+    font-size: 2rem;
+}
+
+.education_content .content p {
+    font-size: 1.6rem;
+    padding-top: .5rem;
+}
+
+
+/* RELOAD AND SCROLL ANIMATION  */
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 98;
+}
+
+.education .education-box .animate.scroll {
+    width: 105%;
+}
+
+.education.show-animate .animate.scroll{
+    transition-delay:calc(.3s * var(--i)) ;
+    width: 0;
+}
+
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}

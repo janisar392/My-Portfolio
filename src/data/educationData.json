@@ -1,0 +1,34 @@
+
+{
+    "education": [
+    {
+        "year": "2022 - 2026",
+        "degree": "B.Tech in Computer Science and Engineering",
+        "institute": "Dr. APJ Abdul Kalam Technical University, Greater Noida",
+        "description": "Pursuing B.Tech in Computer Science and Engineering from Dr. APJ Abdul Kalam Technical University. Skilled in Java full-stack development, DSA, and web technologies. Built projects using Spring Boot, React.js, and MySQL. Participated in hackathons and technical workshops, enhancing problem-solving skills."
+    },
+    {
+        "year": "2019 - 2021",
+        "degree": "Intermediate in Science (PCM)",
+        "institute": "D.S College, Katihar",
+        "description": "Completed Intermediate in Science (PCM) from D.S College, Katihar. Studied Physics, Chemistry, and Mathematics, building a strong foundation in analytical and problem-solving skills. Participated in science-related activities and projects, enhancing practical knowledge."
+    }
+],
+
+    "experience": [
+    {
+        "year": "Jan 2025 - Feb 2025",
+        "role": "Java Developer Intern",
+        "company": "Cognifyz Technologies",
+        "description": "Worked on Java projects from level 1 to level 3, learning concepts such as string manipulation, file handling, network programming, client-server message exchange, multithreading, concurrent programming, event handling, and API integration."
+    },
+    {
+        "year": "Apr 2024 - May 2024",
+        "role": "Data Scientist",
+        "company": "Expoys Data Labs",
+        "description": "Worked on a Diabetes Prediction System using machine learning. Preprocessed medical data, performed EDA using Python libraries (Pandas, Seaborn), and built models using Logistic Regression, Random Forest, and SVM. Evaluated accuracy with precision, recall, F1-score, and ROC-AUC."
+    }
+]
+
+  }
+  

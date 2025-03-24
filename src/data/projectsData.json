@@ -1,0 +1,24 @@
+{
+  "projects": [
+        
+    {
+      "title": "Homyz",
+      "shortDescription": "A modern real estate marketplace built with React.js, featuring property listings, animations, and interactive components.",
+      "longDescription": "The Real Estate React App is a fully responsive and interactive platform for exploring property listings. It includes advanced filtering options, smooth animations, and engaging UI components. Built with React.js and Vite, the app integrates Framer Motion for animations, Swiper for image sliders, and React CountUp for dynamic counters. The user experience is enhanced with an accordion-based FAQ section and a sleek, modern design.",
+      "skills": ["React", "vite", "Swiper", "React Icons", "React CountUp", "React Accordion"],
+      "video": "#",
+      "liveDemoLink": "#",
+      "sourceCodeLink": "#"
+    },    
+    {
+      "title": "Job Portal",
+      "shortDescription": "A React.js-based job portal where job seekers can explore job listings, and employers can post new job openings.",
+      "longDescription": "The React Job Portal is a dynamic platform designed for job seekers and employers. Job seekers can view and apply for job listings, while employers can add new job postings. The portal is built using React.js with React Router DOM for seamless navigation. The user interface is responsive and user-friendly, providing an intuitive experience for all users.",
+      "skills": ["React", "CSS","HTML", "React Hooks","React Router DOM"],
+      "video": "#",
+      "liveDemoLink": "#",
+      "sourceCodeLink": "#"
+    }   
+    
+  ]
+}

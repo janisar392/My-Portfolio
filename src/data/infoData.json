@@ -1,0 +1,18 @@
+{
+  "name": "Janisar Akhtar",
+  "email": "janisar392@gmail.com",
+  "phone": "+91 9608456392",
+  "location": "Greater Noida, India",
+  
+  "bio": "Java Full Stack Developer with expertise in Spring Boot, React, and MySQL. Skilled in building scalable and secure web applications. Known for problem-solving, efficiency, and delivering high-quality results.",
+  
+  "about": "Results-driven Java Full Stack Developer with strong expertise in Spring Boot, MySQL, and React. Proficient in building real-time applications, implementing APIs, and ensuring secure authentication. Experienced in integrating third-party services like Stripe, Razorpay, and Gemini APIs. Passionate about solving complex problems and delivering scalable, maintainable solutions. Eager to contribute technical expertise to dynamic teams and impactful projects.",
+  
+  "longAbout": "Hello! I'm Janisar Akhtar, a passionate Java Full Stack Developer with a strong foundation in building real-time web applications. I specialize in Java Spring Boot for backend development, React.js for front-end interfaces, and MySQL for managing databases. Throughout my B.Tech in Computer Science, I’ve worked on multiple projects, including a **Real-Time Trading Platform with AI Chatbot**, where I integrated Gemini and CoinGecko APIs for real-time cryptocurrency prices and implemented secure payment gateways using Stripe and Razorpay.\n\nI am proficient in developing RESTful APIs, implementing Spring Security for authentication, and using modern tools like Maven, IntelliJ IDEA, and Postman for efficient development and testing. I also have experience with React, Redux, Tailwind CSS, and Shadcn UI for building dynamic and responsive frontends.\n\nWhen solving coding challenges, I take a structured approach, breaking problems into smaller components and optimizing for performance. I enjoy participating in coding competitions and continuously learning new technologies to enhance my skills.\n\nOn a personal level, I am dedicated to my career growth, aiming for high-paying software engineering roles. I’m motivated by my family’s support and strive to make them proud through my professional success. I am also passionate about exploring new places and documenting my experiences through visual storytelling.\n\nI am eager to contribute my skills to impactful projects and collaborate with innovative teams. Let’s connect and build something amazing together!",
+  
+  "socialLinks": {
+    "github": "https://github.com/janisar392",
+    "linkedin": "https://www.linkedin.com/in/janisar392/",
+    "leetcode": "https://leetcode.com/u/janisar392/"
+  }
+}
