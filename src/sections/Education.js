@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { animations } from "../components/animations.js";
 import styles from '../assets/CSS/Education.module.css';
 import { ReactComponent as Calendar } from '../assets/Svg/bx-calendar.svg';
-import { FaSchool } from 'react-icons/fa'; // Using react-icons instead of custom SVG
+import { FaSchool } from 'react-icons/fa';
 import educationData from '../data/educationData.json'; 
 
 function Education() {
@@ -20,7 +20,7 @@ function Education() {
             {educationData.education.map((item, index) => (
               <motion.div
                 className={styles.education_content}
-                key={index}
+                key={`edu-${index}`} // Added unique key prefix
                 {...animations.fadeInUp}
               >
                 <div className={styles.content}>
@@ -56,7 +56,7 @@ function Education() {
             {educationData.experience.map((item, index) => (
               <motion.div
                 className={styles.education_content}
-                key={index}
+                key={`exp-${index}`} // Added unique key prefix
                 {...animations.fadeInUp}
               >
                 <div className={styles.content}>
@@ -65,14 +65,18 @@ function Education() {
                   </div>
                   <h3>
                     {item.role} -{' '}
-                    <a
-                      href="#"
-                      target="_blank"
-                      className={styles.companyLink}
-                      rel="noreferrer"
-                    >
-                      <b>{item.company}</b>
-                    </a>
+                    {item.companyLink ? (
+                      <a
+                        href={item.companyLink}
+                        target="_blank"
+                        className={styles.companyLink}
+                        rel="noopener noreferrer" // Improved security
+                      >
+                        <b>{item.company}</b>
+                      </a>
+                    ) : (
+                      <span className={styles.companyName}>{item.company}</span>
+                    )}
                   </h3>
                   <p className={styles.description}>{item.description}</p>
                 </div>
