@@ -1,4 +1,3 @@
-
 .education {
     display: flex;
     justify-content: center;
@@ -6,36 +5,37 @@
     flex-direction: column;
     min-height: auto;
     padding-bottom: 5rem;
-}
-
-.education .education_row {
+  }
+  
+  .education .education_row {
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
-}
-
-.education_row .education_colum {
+  }
+  
+  .education_row .education_colum {
     flex: 1 1 40rem;
-}
-
-.education_colum .title {
+  }
+  
+  .education_colum .title {
     position: relative;
     display: inline-block;
     font-size: 2.5rem;
     margin: 0 0 1.5rem 2rem;
-}
-
-.education_colum .education_box {
+    color: var(--text-color);
+  }
+  
+  .education_colum .education_box {
     position: relative;
-    border-left: .2rem solid var(--main-color);
-}
-
-.education_box .education_content {
+    border-left: 0.2rem solid var(--main-color);
+  }
+  
+  .education_box .education_content {
     position: relative;
     padding-left: 2rem;
-}
-
-.education_box .education_content::before {
+  }
+  
+  .education_box .education_content::before {
     content: '';
     position: absolute;
     top: 0;
@@ -44,56 +44,101 @@
     height: 2rem;
     background: var(--main-color);
     border-radius: 50%;
-}
-
-.education_content .content {
+  }
+  
+  .education_content .content {
     position: relative;
     padding: 1.5rem;
-    border: .2rem solid var(--main-color);
-    border-radius: .6rem;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 0.6rem;
     margin-bottom: 2rem;
     overflow: hidden;
-}
-
-.education_content .content::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--second-bg-color);
-    z-index: -1;
-    transition: .5s;
-}
-
-.education_content .content:hover::before{
-    width: 100%;
-}
-
-.education_content .content .year {
+    background: var(--bg-color);
+    transition: 0.3s ease;
+  }
+  
+  .education_content .content:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .education_content .content .year {
     font-size: 1.5rem;
     color: var(--main-color);
-    padding-bottom: .5rem;
-}
-
-
-.education_content .content .year .box {
-    padding-right: .5rem;
-}
-
-.education_content .content h3{
-    font-size: 2rem;
-}
-
-.education_content .content p {
-    font-size: 1.6rem;
-    padding-top: .5rem;
-}
-
-
-/* RELOAD AND SCROLL ANIMATION  */
-.animate {
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .education_content .content .year .bx {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--main-color);
+  }
+  
+  .degree {
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .institute {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    opacity: 0.9;
+  }
+  
+  .schoolIcon {
+    font-size: 1.4rem;
+    color: var(--main-color);
+  }
+  
+  .performance {
+    background-color: rgba(52, 152, 219, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    gap: 0.5rem;
+    font-size: 1.4rem;
+  }
+  
+  .performanceValue {
+    color: var(--text-color);
+    font-weight: 600;
+  }
+  
+  .performanceStatus {
+    color: var(--text-color);
+    opacity: 0.7;
+    font-style: italic;
+  }
+  
+  .description {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.8;
+  }
+  
+  .companyLink {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .companyLink:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+  
+  /* Animation styles */
+  .animate {
     position: absolute;
     top: 0;
     right: 0;
@@ -101,20 +146,15 @@
     height: 100%;
     background: var(--bg-color);
     z-index: 98;
-}
-
-.education .education-box .animate.scroll {
-    width: 105%;
-}
-
-.education.show-animate .animate.scroll{
-    transition-delay:calc(.3s * var(--i)) ;
+  }
+  
+  .education.show-animate .animate.scroll {
+    transition-delay: calc(0.3s * var(--i));
     width: 0;
-}
-
-
-@keyframes showRight {
+  }
+  
+  @keyframes showRight {
     100% {
-        width: 0;
+      width: 0;
     }
-}
+  }
