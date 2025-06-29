@@ -2,38 +2,35 @@ import React, { useEffect } from "react";
 import { useParams, Link, useLocation } from "react-router-dom"; 
 import styles from "../assets/CSS/ProjectDetails.module.css";
 import projectsData from "../data/projectsData.json";
-import homyzImage from "../assets/img/homyz.png";
-import jenkinsonAquariumImage from "../assets/img/jenkinsonAquarium.png";
-import jobportalImage from "../assets/img/jobportal.png";
-import mainImage from "../assets/img/Resume.png";
 import { motion } from 'framer-motion';
 import { animations } from "../components/animations.js";
 
-
-
+// ✅ Import actual project images
+import TastyTrekImage from "../assets/img/TastyTrek.png";
+import MyAINeighborImage from "../assets/img/MyAINeighbor.png";
+import AIResumeBuilderImage from "../assets/img/AIResumeBuilder.jpeg";
 
 const ProjectDetails = () => {
   const { title } = useParams();
-  const location = useLocation(); // Get current location
+  const location = useLocation();
   const project = projectsData.projects.find((p) => p.title === title);
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top whenever route changes
-  }, [location]); // Dependency added
+    window.scrollTo(0, 0);
+  }, [location]);
 
   if (!project) {
     return <h2 className={styles.notFound}>Project not found</h2>;
   }
 
   const getImage = (title) => {
-    if (title === "Homyz") return homyzImage;
-    if (title === "Jenkinson Aquarium") return jenkinsonAquariumImage;
-    if (title === "Job Portal") return jobportalImage;
-    if (title === "My Resume") return mainImage;
+    if (title === "TastyTrek") return TastyTrekImage;
+    if (title === "My AI Neighbor") return MyAINeighborImage;
+    if (title === "AI Resume Builder") return AIResumeBuilderImage;
     return "default_image_path_here";
   };
 
-  const firstThreeProjects = projectsData.projects.slice(0, 4);
+  const firstThreeProjects = projectsData.projects.slice(0, 3);
 
   return (
     <section className={styles.container}>
@@ -61,13 +58,13 @@ const ProjectDetails = () => {
           </motion.div>
         </motion.div>
       </div>
+
       <motion.div className={`btn-box ${styles.btn}`} {...animations.fadeInUp}>
         <a href={project.liveDemoLink} target="_blank" rel="noopener noreferrer" className="btn">Live Demo</a>
         <a href={project.sourceCodeLink} target="_blank" rel="noopener noreferrer" className="btn">Source Code</a>
       </motion.div>
 
-      <motion.h2 className="heading" {...animations.zoomIn} >
-
+      <motion.h2 className="heading" {...animations.zoomIn}>
         Projects <span>Gallery</span>
       </motion.h2>
 

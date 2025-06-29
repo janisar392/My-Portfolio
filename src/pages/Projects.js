@@ -1,16 +1,14 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "../assets/CSS/Projects.module.css";
 import projectsData from "../data/projectsData.json";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { animations } from "../components/animations.js";
-import PortfolioImage from "../assets/img/Portfolio.png";
-import homyzImage from "../assets/img/homyz.png";
-import jenkinsonAquariumImage from "../assets/img/jenkinsonAquarium.png";
-import jobportalImage from "../assets/img/jobportal.png";
-import calculatorImage from "../assets/img/calculator.png";
-import tictacImage from "../assets/img/tictacgame.png";
-import mainImage from "../assets/img/Resume.png";
+
+// ✅ Import actual images
+import TastyTrekImage from "../assets/img/TastyTrek.png";
+import MyAINeighborImage from "../assets/img/MyAINeighbor.png";
+import AIResumeBuilderImage from "../assets/img/AIResumeBuilder.jpeg";
 
 const Projects = () => {
   const [selectedSkill, setSelectedSkill] = useState("All");
@@ -19,36 +17,19 @@ const Projects = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // ✅ Map title to corresponding image
   const getImage = (title) => {
-    if (title === "Calculator") {
-      return calculatorImage;
-    } else if (title === "Tic Tac Toe") {
-      return tictacImage;
-    } else if (title === "My Resume") {
-      return mainImage;
-    } else if (title === "My Portfolio") {
-      return PortfolioImage;
-    } else if (title === "Homyz") {
-      return homyzImage;
-    } else if (title === "Job Portal") {
-      return jobportalImage;
-    } else if (title === "Jenkinson Aquarium") {
-      return jenkinsonAquariumImage;
-    } else {
-      return "default_image_path_here";
-    }
+    if (title === "TastyTrek") return TastyTrekImage;
+    if (title === "My AI Neighbor") return MyAINeighborImage;
+    if (title === "AI Resume Builder") return AIResumeBuilderImage;
+    return "default_image_path_here"; // fallback image
   };
 
-  const allowedSkills = ["All", "React", "HTML, CSS, JavaScript"];
+  const allowedSkills = ["All", "React", "Spring Boot", "HTML", "CSS", "JavaScript"];
 
-  // Filter projects based on the selected skill
   const filteredProjects =
     selectedSkill === "All"
       ? projectsData.projects
-      : selectedSkill === "HTML, CSS, JavaScript"
-      ? projectsData.projects.filter((project) =>
-          ["HTML", "CSS", "JavaScript"].every((skill) => project.skills.includes(skill))
-        )
       : projectsData.projects.filter((project) =>
           project.skills.includes(selectedSkill)
         );
@@ -56,22 +37,24 @@ const Projects = () => {
   return (
     <section className={styles.projects} id="projects">
       <div className={styles.project_container}>
-        <motion.h2 className="heading" >
+        <motion.h2 className="heading">
           All <span>Projects</span>
         </motion.h2>
 
         {/* Filter Bar */}
         <motion.div className={styles.filter_bar}>
-        {allowedSkills.map((skill, index) => (
-          <button
-            key={index}
-            className={`${styles.filter_btn} ${selectedSkill === skill ? styles.active : ""}`}
-            onClick={() => setSelectedSkill(skill)}
-          >
-            {skill}
-          </button>
-        ))}
-      </motion.div>
+          {allowedSkills.map((skill, index) => (
+            <button
+              key={index}
+              className={`${styles.filter_btn} ${
+                selectedSkill === skill ? styles.active : ""
+              }`}
+              onClick={() => setSelectedSkill(skill)}
+            >
+              {skill}
+            </button>
+          ))}
+        </motion.div>
 
         {/* Project List */}
         <div className={styles.project_list}>
